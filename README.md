@@ -1,1 +1,3 @@
-# Natouche68.github.io
+# Pages GitHub de Natouche68
+Ce repository représente mes pages GitHub.
+Elles sont disponibles à l'adresse suivante :
