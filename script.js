@@ -11,6 +11,3 @@ function imageFullScreen(nomLangage)
 }
 
 $('img#html').on('click', function() { imageFullScreen('html') })
-
-// Coloration syntaxique du code
-dp.SyntaxHighlighter.HighlightAll('code');
