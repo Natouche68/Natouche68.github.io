@@ -10,4 +10,12 @@ function imageFullScreen(nomLangage)
     }
 }
 
+function afficheExCode(nomLangage)
+{
+    $('tr#' + nomLangage).show()
+}
+
+$('tr#html').hide()
+
 $('img#html').on('click', function() { imageFullScreen('html') })
+$('h3#html').on('click', function() { afficheExCode('html') })
