@@ -33,6 +33,12 @@
             font-size: 1.4em;
             color: gold;
         }
+
+        h3#php
+        {
+            font-size: 1.4em;
+            color: slateblue;
+        }
     </style>
     <body>
         <p> 
@@ -99,22 +105,14 @@ if (screen.width < 500)
                 </td>
             </tr><tr>
                 <td style="width: 80px;">
-                    <img src="images/logo_html.png" alt="Logo d'HTML" height=50 id="html" />
+                    <img src="images/logo_php.png" alt="Logo de PHP" height=50 id="php" />
                 </td><td>
-                    <h3 id="html">HTML</h3>
+                    <h3 id="php">PHP</h3>
                 </td>
-            </tr><tr id="html">
+            </tr><tr id="php">
                 <td colspan="2">
-                    <pre><code class="language-markup">&lt;p&gt;
-    Ceci est un code &lt;em&gt;HTML&lt;/em&gt;.&lt;br/&gt;
-    On l'utlise pour créer les pages des &lt;strong&gt;sites Internet&lt;/strong&gt;.&lt;br/&gt;
-    On rajoute du :
-    &lt;ul&gt;
-        &lt;li&gt;CSS,&lt;/li&gt;
-        &lt;li&gt;du &lt;mark&gt;JavaScript&lt;/mark&gt;,&lt;/li&gt;
-        &lt;li&gt;ou encore du &lt;a href="https://www.php.net/"&gt;PHP&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/p&gt;</code></pre>
+                    <pre><code class="language-php">$pseudo = $_GET['nom_user'];
+echo 'Votre nom d\'utilisateur est : ' . $pseudo ;</code></pre>
                 </td>
             </tr><tr>
                 <td style="width: 80px;">
