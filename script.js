@@ -16,6 +16,9 @@ function afficheExCode(nomLangage)
 }
 
 $('tr#html').hide()
+$('tr#css').hide()
 
 $('img#html').on('click', function() { imageFullScreen('html') })
 $('h3#html').on('click', function() { afficheExCode('html') })
+$('img#css').on('click', function() { imageFullScreen('css') })
+$('h3#css').on('click', function() { afficheExCode('css') })
