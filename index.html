@@ -39,6 +39,12 @@
             font-size: 1.4em;
             color: slateblue;
         }
+
+        h3#sql
+        {
+            font-size: 1.4em;
+            color:darkorange;
+        }
     </style>
     <body>
         <p> 
@@ -112,26 +118,20 @@ if (screen.width < 500)
             </tr><tr id="php">
                 <td colspan="2">
                     <pre><code class="language-php">$pseudo = $_GET['nom_user'];
-echo 'Votre nom d\'utilisateur est : ' . $pseudo ;</code></pre>
+echo 'Votre nom d\'utilisateur est : ' . $pseudo ;
+echo 'Si vous vous appelez Lucas, cliquez &lt;a href="page_en_php.php?pseudo=Lucas"&gt;ici&lt;/a&gt;.';</code></pre>
                 </td>
             </tr><tr>
                 <td style="width: 80px;">
-                    <img src="images/logo_html.png" alt="Logo d'HTML" height=50 id="html" />
+                    <img src="images/logo_sql.png" alt="Logo de MySQL" height=50 id="sql" />
                 </td><td>
-                    <h3 id="html">HTML</h3>
+                    <h3 id="sql">SQL</h3>
                 </td>
-            </tr><tr id="html">
+            </tr><tr id="sql">
                 <td colspan="2">
-                    <pre><code class="language-markup">&lt;p&gt;
-    Ceci est un code &lt;em&gt;HTML&lt;/em&gt;.&lt;br/&gt;
-    On l'utlise pour créer les pages des &lt;strong&gt;sites Internet&lt;/strong&gt;.&lt;br/&gt;
-    On rajoute du :
-    &lt;ul&gt;
-        &lt;li&gt;CSS,&lt;/li&gt;
-        &lt;li&gt;du &lt;mark&gt;JavaScript&lt;/mark&gt;,&lt;/li&gt;
-        &lt;li&gt;ou encore du &lt;a href="https://www.php.net/"&gt;PHP&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/p&gt;</code></pre>
+                    <pre><code class="language-sql">SELECT * FROM 'messages' ORDER BY 'id'
+
+INSERT INTO 'messages' VALUES('Natan', 'Vous êtes là ?')</code></pre>
                 </td>
             </tr><tr>
                 <td style="width: 80px;">
