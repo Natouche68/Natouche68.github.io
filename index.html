@@ -45,6 +45,12 @@
             font-size: 1.4em;
             color:darkorange;
         }
+
+        h3#csharp
+        {
+            font-size: 1.4em;
+            color: darkorchid;
+        }
     </style>
     <body>
         <p> 
@@ -135,22 +141,24 @@ INSERT INTO 'messages' VALUES('Natan', 'Vous êtes là ?')</code></pre>
                 </td>
             </tr><tr>
                 <td style="width: 80px;">
-                    <img src="images/logo_html.png" alt="Logo d'HTML" height=50 id="html" />
+                    <img src="images/logo_csharp.png" alt="Logo de C#" height=50 id="csharp" />
                 </td><td>
-                    <h3 id="html">HTML</h3>
+                    <h3 id="csharp">C#</h3>
                 </td>
-            </tr><tr id="html">
+            </tr><tr id="csharp">
                 <td colspan="2">
-                    <pre><code class="language-markup">&lt;p&gt;
-    Ceci est un code &lt;em&gt;HTML&lt;/em&gt;.&lt;br/&gt;
-    On l'utlise pour créer les pages des &lt;strong&gt;sites Internet&lt;/strong&gt;.&lt;br/&gt;
-    On rajoute du :
-    &lt;ul&gt;
-        &lt;li&gt;CSS,&lt;/li&gt;
-        &lt;li&gt;du &lt;mark&gt;JavaScript&lt;/mark&gt;,&lt;/li&gt;
-        &lt;li&gt;ou encore du &lt;a href="https://www.php.net/"&gt;PHP&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/p&gt;</code></pre>
+                    <pre><code class="language-csharp">string pseudo = "Natan";
+Console.WriteLine("Votre pseudo est : " + pseudo);
+pseudo = Console.ReadLine();
+if (pseudo == "exit")
+{
+    // Ne fait rien, donc quitte.
+}
+else
+{
+    Console.WriteLine("Désolé, je me suis trompé.");
+    Console.WriteLine("En fait, votre pseudo est : " + pseudo);
+}</code></pre>
                 </td>
             </tr><tr>
                 <td style="width: 80px;">
