@@ -3,9 +3,11 @@
 	import About from './lib/About.svelte';
 	import Projects from './lib/Projects.svelte';
 	import Stack from './lib/Stack.svelte';
+	import Inspiration from './lib/Inspiration.svelte';
 </script>
 
 <Hero />
 <About />
 <Projects />
 <Stack />
+<Inspiration />
