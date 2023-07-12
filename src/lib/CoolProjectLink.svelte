@@ -49,7 +49,7 @@
 		border-radius: 50%;
 		border: 8px solid #fff;
 		transform: scale(0);
-		transition: all 0.4s ease;
+		transition: all 0.4s cubic-bezier(0.75, 0, 0.25, 1.5);
 	}
 
 	.cool-project-link:hover .image {

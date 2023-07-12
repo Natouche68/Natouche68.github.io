@@ -48,7 +48,7 @@
 	.social img {
 		height: 64px;
 		width: 64px;
-		transition: all 0.3s ease;
+		transition: all 0.3s cubic-bezier(0.75, 0, 0.25, 1.5);
 	}
 
 	.social img:hover {
