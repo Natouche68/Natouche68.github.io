@@ -36,6 +36,11 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		transition: all 0.4s cubic-bezier(0.75, 0, 0.25, 1.5);
+	}
+
+	.cool-project-link:hover .name {
+		transform: scale(0);
 	}
 
 	.image {
