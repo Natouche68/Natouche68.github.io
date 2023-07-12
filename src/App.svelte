@@ -2,8 +2,10 @@
 	import Hero from './lib/Hero.svelte';
 	import About from './lib/About.svelte';
 	import Projects from './lib/Projects.svelte';
+	import Stack from './lib/Stack.svelte';
 </script>
 
 <Hero />
 <About />
 <Projects />
+<Stack />

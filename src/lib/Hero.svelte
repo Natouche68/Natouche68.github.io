@@ -56,10 +56,10 @@
 
 	.continue {
 		position: absolute;
-		top: 657px;
+		/* top: 657px; */
 		left: 0;
 		right: 0;
-		/* bottom: 29px; */
+		bottom: 29px;
 		text-align: center;
 		font-size: 32px;
 		font-style: italic;

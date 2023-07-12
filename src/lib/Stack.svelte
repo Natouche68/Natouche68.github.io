@@ -1,0 +1,82 @@
+<div class="stack">
+	<div class="title">
+		My stack
+
+		<div class="shard" />
+	</div>
+	<div class="list">
+		<img src="javascript logo.png" alt="JavaScript logo" />
+		<img src="svelte logo.png" alt="Svelte logo" />
+		<img src="astro logo.png" alt="Astro logo" />
+		<img src="typescript logo.png" alt="Typescript logo" />
+		<img src="deno logo.png" alt="Deno logo" />
+		<img src="godot logo.png" alt="Godot logo" />
+		<img src="vscode logo.png" alt="Visual Studio Code logo" />
+
+		<!-- Add again the first logos to repeat the animation -->
+		<img src="javascript logo.png" alt="JavaScript logo" />
+		<img src="svelte logo.png" alt="Svelte logo" />
+		<img src="astro logo.png" alt="Astro logo" />
+		<img src="typescript logo.png" alt="Typescript logo" />
+		<img src="deno logo.png" alt="Deno logo" />
+	</div>
+</div>
+
+<style>
+	.stack {
+		width: 100%;
+		height: 100vh;
+		background: #131313;
+		color: #ffffff;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.title {
+		position: absolute;
+		top: 133px;
+		left: 92px;
+		right: 92px;
+		/* bottom: 492px; */
+		font-size: 96px;
+		font-weight: 700;
+		line-height: 100%;
+		letter-spacing: -2.88px;
+		text-transform: uppercase;
+	}
+
+	.shard {
+		position: absolute;
+		top: -30px;
+		left: -36px;
+		height: 156px;
+		width: 3px;
+		background: linear-gradient(#00a3ff00 0%, #00a3ff 50%, #00a3ff00 100%);
+	}
+
+	@keyframes tools-list-anim {
+		from {
+			transform: translateX(0);
+		}
+
+		to {
+			transform: translateX(calc((256px + ((100vw - 256px * 5) / 5)) * -7));
+		}
+	}
+
+	.list {
+		position: absolute;
+		top: 362px;
+		left: 0;
+		right: 0;
+		height: 256px;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap: calc((100vw - 256px * 5) / 5);
+
+		animation: tools-list-anim 32s linear 0s infinite;
+	}
+</style>
