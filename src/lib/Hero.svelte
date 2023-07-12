@@ -11,11 +11,12 @@
 
 <style>
 	.hero {
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 		background: #131313;
 		color: #ffffff;
 		position: relative;
+		overflow: hidden;
 	}
 
 	.title {
