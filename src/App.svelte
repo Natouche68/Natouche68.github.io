@@ -4,6 +4,7 @@
 	import Projects from './lib/Projects.svelte';
 	import Stack from './lib/Stack.svelte';
 	import Inspiration from './lib/Inspiration.svelte';
+	import Footer from './lib/Footer.svelte';
 </script>
 
 <Hero />
@@ -11,3 +12,4 @@
 <Projects />
 <Stack />
 <Inspiration />
+<Footer />
