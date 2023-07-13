@@ -1,6 +1,28 @@
 <script lang="ts">
 	import Project from "./Project.svelte";
+
+	let scroll: number;
+	let projectList: HTMLDivElement;
+	let projectListXOffset: number;
+	let windowHeight: number;
+	let projectsYOffset: number;
+
+	function animateParallax() {
+		const projectListYPosition = projectList.getBoundingClientRect().top;
+
+		projectListXOffset = (projectListYPosition / windowHeight) * 100;
+
+		if (projectListYPosition <= 0 && projectListYPosition >= -windowHeight) {
+			projectsYOffset = -projectListYPosition;
+		}
+	}
 </script>
+
+<svelte:window
+	bind:innerHeight={windowHeight}
+	bind:scrollY={scroll}
+	on:scroll={animateParallax}
+/>
 
 <div class="projects">
 	<div class="title">
@@ -8,11 +30,15 @@
 
 		<div class="shard" />
 	</div>
-	<div class="list">
+	<div
+		class="list"
+		bind:this={projectList}
+		style:transform={`translateX(${projectListXOffset}vw)`}
+	>
 		<Project
 			name="Archery Scorer"
-			nameCoords={{ x: 140, y: 250 }}
-			images={[
+			initialNameCoords={{ x: 140, y: 250 }}
+			initialImages={[
 				{
 					path: "projects screenshots/archery scorer.png",
 					x: 0,
@@ -20,11 +46,12 @@
 					scale: 0.75,
 				},
 			]}
+			bind:yOffset={projectsYOffset}
 		/>
 		<Project
 			name="Archery Watch"
-			nameCoords={{ x: -300, y: -200 }}
-			images={[
+			initialNameCoords={{ x: -300, y: -200 }}
+			initialImages={[
 				{
 					path: "projects screenshots/archery watch 1.png",
 					x: -60,
@@ -38,6 +65,7 @@
 					scale: 0.7,
 				},
 			]}
+			bind:yOffset={projectsYOffset}
 		/>
 	</div>
 </div>
@@ -45,7 +73,7 @@
 <style>
 	.projects {
 		width: 100%;
-		height: calc(100vh + 367px);
+		height: calc(200vh + 367px);
 		background: #131313;
 		color: #ffffff;
 		position: relative;
@@ -77,11 +105,10 @@
 	.list {
 		position: absolute;
 		bottom: 0;
-		height: 100vh;
+		height: 200vh;
 		display: flex;
 		flex-direction: row;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: flex-start;
-		transform: translateX(-100vw);
 	}
 </style>

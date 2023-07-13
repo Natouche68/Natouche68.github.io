@@ -7,11 +7,34 @@
 	};
 
 	export let name: string;
-	export let nameCoords: { x: number; y: number };
-	export let images: Image[];
+	export let initialNameCoords: { x: number; y: number };
+	export let initialImages: Image[];
+	export let yOffset: number;
+
+	let nameCoords = structuredClone(initialNameCoords);
+	let images = structuredClone(initialImages);
+
+	let windowWidth: number;
+	let projectElement: HTMLDivElement;
+
+	function animateParallax() {
+		const projectXPosition = projectElement.getBoundingClientRect().left;
+
+		nameCoords.x = projectXPosition / 2 + initialNameCoords.x;
+
+		images.forEach((image, index) => {
+			if (index !== 0) {
+				image.x = projectXPosition / 4 + initialImages[index].x;
+			}
+		});
+
+		images = images;
+	}
 </script>
 
-<div class="project">
+<svelte:window bind:innerWidth={windowWidth} on:scroll={animateParallax} />
+
+<div class="project" style:top={`${yOffset}px`} bind:this={projectElement}>
 	<div
 		class="name"
 		style:top={`calc(50% + ${nameCoords.y}px)`}
