@@ -12,7 +12,10 @@
 
 		projectListXOffset = (projectListYPosition / windowHeight) * 100;
 
-		if (projectListYPosition <= 0 && projectListYPosition >= -windowHeight) {
+		if (
+			projectListYPosition <= 0 &&
+			projectListYPosition >= -windowHeight * 6
+		) {
 			projectsYOffset = -projectListYPosition;
 		}
 	}
@@ -67,13 +70,96 @@
 			]}
 			bind:yOffset={projectsYOffset}
 		/>
+		<Project
+			name="Tic Tac Toe AI"
+			initialNameCoords={{ x: 180, y: 100 }}
+			initialImages={[
+				{
+					path: "projects screenshots/tic tac toe ai.png",
+					x: 0,
+					y: 0,
+					scale: 0.5,
+				},
+			]}
+			bind:yOffset={projectsYOffset}
+		/>
+		<Project
+			name="Arcade Express"
+			initialNameCoords={{ x: 360, y: -200 }}
+			initialImages={[
+				{
+					path: "projects screenshots/arcade express.png",
+					x: 0,
+					y: 0,
+					scale: 0.4,
+				},
+			]}
+			bind:yOffset={projectsYOffset}
+		/>
+		<Project
+			name="Whimsy Sky"
+			initialNameCoords={{ x: -320, y: -100 }}
+			initialImages={[
+				{
+					path: "projects screenshots/whimsy sky 1.png",
+					x: -50,
+					y: 0,
+					scale: 0.8,
+				},
+				{
+					path: "projects screenshots/whimsy sky 2.png",
+					x: 200,
+					y: 100,
+					scale: 0.6,
+				},
+			]}
+			bind:yOffset={projectsYOffset}
+		/>
+		<Project
+			name="Theme Generator"
+			initialNameCoords={{ x: -140, y: 250 }}
+			initialImages={[
+				{
+					path: "projects screenshots/theme generator.png",
+					x: 0,
+					y: 0,
+					scale: 0.5,
+				},
+			]}
+			bind:yOffset={projectsYOffset}
+		/>
+		<Project
+			name="Some Games"
+			initialNameCoords={{ x: 0, y: 0 }}
+			initialImages={[
+				{
+					path: "projects screenshots/blur balls.png",
+					x: 250,
+					y: -130,
+					scale: 0.2,
+				},
+				{
+					path: "projects screenshots/isle invaders.png",
+					x: 320,
+					y: 120,
+					scale: 0.3,
+				},
+				{
+					path: "projects screenshots/cake clash.png",
+					x: -380,
+					y: -60,
+					scale: 0.4,
+				},
+			]}
+			bind:yOffset={projectsYOffset}
+		/>
 	</div>
 </div>
 
 <style>
 	.projects {
 		width: 100%;
-		height: calc(200vh + 367px);
+		height: calc(700vh + 367px);
 		background: #131313;
 		color: #ffffff;
 		position: relative;
@@ -105,7 +191,7 @@
 	.list {
 		position: absolute;
 		bottom: 0;
-		height: 200vh;
+		height: 700vh;
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
