@@ -1,6 +1,10 @@
 <script lang="ts">
+	import { onMount } from "svelte";
+	import { observeElement, hackingAnimation } from "./animateOnScroll";
+	import Shard from "./Shard.svelte";
 	import Project from "./Project.svelte";
 
+	let titleElement: HTMLDivElement;
 	let scroll: number;
 	let projectList: HTMLDivElement;
 	let projectListXOffset: number;
@@ -19,6 +23,12 @@
 			projectsYOffset = -projectListYPosition;
 		}
 	}
+
+	onMount(() => {
+		observeElement(titleElement, () => {
+			hackingAnimation(titleElement);
+		});
+	});
 </script>
 
 <svelte:window
@@ -28,11 +38,8 @@
 />
 
 <div class="projects">
-	<div class="title">
-		Selected projects
-
-		<div class="shard" />
-	</div>
+	<div class="title" bind:this={titleElement}>Selected projects</div>
+	<Shard />
 	<div
 		class="list"
 		bind:this={projectList}
@@ -184,15 +191,6 @@
 		line-height: 100%;
 		letter-spacing: -2.88px;
 		text-transform: uppercase;
-	}
-
-	.shard {
-		position: absolute;
-		top: -30px;
-		left: -36px;
-		height: 156px;
-		width: 3px;
-		background: linear-gradient(#00a3ff00 0%, #00a3ff 50%, #00a3ff00 100%);
 	}
 
 	.list {

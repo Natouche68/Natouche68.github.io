@@ -1,13 +1,48 @@
-<div class="about">
-	<div class="title">
-		About Natouche68
+<script lang="ts">
+	import { onMount } from "svelte";
+	import { observeElement, hackingAnimation } from "./animateOnScroll";
+	import Shard from "./Shard.svelte";
 
-		<div class="shard" />
-	</div>
-	<div class="text">
+	let titleElement: HTMLDivElement;
+	let textElement: HTMLDivElement;
+
+	onMount(() => {
+		observeElement(titleElement, () => {
+			hackingAnimation(titleElement);
+		});
+		observeElement(textElement, () => {
+			textElement.animate(
+				[
+					{
+						transform: "translateX(-25%)",
+						opacity: "0",
+						filter: "blur(4px)",
+					},
+					{
+						transform: "translateX(0)",
+						opacity: "1",
+						filter: "blur(0)",
+					},
+				],
+				{
+					delay: 800,
+					duration: 600,
+					easing: "cubic-bezier(0.5, 0, 0.5, 1)",
+					fill: "both",
+				}
+			);
+		});
+	});
+</script>
+
+<div class="about">
+	<div class="title" bind:this={titleElement}>About Natouche68</div>
+	<Shard />
+	<div class="text" bind:this={textElement}>
 		<p>
-			I design and develop web apps and simple games in my free time, just for fun. I like to create
-			small experiments and discover new tools and designs.
+			I design and develop web apps and simple games in my free time, just for
+			fun. I like to create small experiments and discover new tools and
+			designs.
 		</p>
 		<p>I learned web and game development by watching tutorials on YouTube.</p>
 		<p>I also love rabbits, they are so cute !</p>
@@ -35,15 +70,6 @@
 		line-height: 100%;
 		letter-spacing: -2.88px;
 		text-transform: uppercase;
-	}
-
-	.shard {
-		position: absolute;
-		top: -30px;
-		left: -36px;
-		height: 156px;
-		width: 3px;
-		background: linear-gradient(#00a3ff00 0%, #00a3ff 50%, #00a3ff00 100%);
 	}
 
 	.text {

@@ -1,15 +1,24 @@
 <script lang="ts">
-	import CoolProjectLink from './CoolProjectLink.svelte';
+	import { onMount } from "svelte";
+	import { observeElement, hackingAnimation } from "./animateOnScroll";
+	import Shard from "./Shard.svelte";
+	import CoolProjectLink from "./CoolProjectLink.svelte";
+
+	let titleElement: HTMLDivElement;
+
+	onMount(() => {
+		observeElement(titleElement, () => {
+			hackingAnimation(titleElement);
+		});
+	});
 </script>
 
 <div class="inspiration">
-	<div class="title">
-		Other cool projects
-
-		<div class="shard" />
-	</div>
+	<div class="title" bind:this={titleElement}>Other cool projects</div>
+	<Shard />
 	<div class="subtitle">
-		// interesting projects and great YouTubers to always learn and discover new things
+		// interesting projects and great YouTubers to always learn and discover new
+		things
 	</div>
 	<div class="list">
 		<CoolProjectLink
@@ -66,15 +75,6 @@
 		line-height: 100%;
 		letter-spacing: -2.88px;
 		text-transform: uppercase;
-	}
-
-	.shard {
-		position: absolute;
-		top: -30px;
-		left: -36px;
-		height: 156px;
-		width: 3px;
-		background: linear-gradient(#00a3ff00 0%, #00a3ff 50%, #00a3ff00 100%);
 	}
 
 	.subtitle {

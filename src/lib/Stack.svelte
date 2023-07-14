@@ -1,9 +1,20 @@
-<div class="stack">
-	<div class="title">
-		My stack
+<script lang="ts">
+	import { onMount } from "svelte";
+	import { observeElement, hackingAnimation } from "./animateOnScroll";
+	import Shard from "./Shard.svelte";
 
-		<div class="shard" />
-	</div>
+	let titleElement: HTMLDivElement;
+
+	onMount(() => {
+		observeElement(titleElement, () => {
+			hackingAnimation(titleElement);
+		});
+	});
+</script>
+
+<div class="stack">
+	<div class="title" bind:this={titleElement}>My stack</div>
+	<Shard />
 	<div class="list">
 		<img src="javascript logo.png" alt="JavaScript logo" />
 		<img src="svelte logo.png" alt="Svelte logo" />
@@ -43,15 +54,6 @@
 		line-height: 100%;
 		letter-spacing: -2.88px;
 		text-transform: uppercase;
-	}
-
-	.shard {
-		position: absolute;
-		top: -30px;
-		left: -36px;
-		height: 156px;
-		width: 3px;
-		background: linear-gradient(#00a3ff00 0%, #00a3ff 50%, #00a3ff00 100%);
 	}
 
 	@keyframes tools-list-anim {

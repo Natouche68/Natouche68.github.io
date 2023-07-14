@@ -14,9 +14,11 @@
 				[
 					{
 						opacity: "0",
+						transform: `translateX(${x / 2}px)`,
 					},
 					{
 						opacity: "1",
+						transform: "translateX(0)",
 					},
 				],
 				{
