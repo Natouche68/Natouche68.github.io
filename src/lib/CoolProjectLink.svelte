@@ -8,7 +8,7 @@
 	<div class="name">
 		{name}
 	</div>
-	<img src={imagePath} alt={name + ' logo'} class="image" />
+	<img src={imagePath} alt={name + " logo"} class="image" />
 </a>
 
 <style>
@@ -59,5 +59,6 @@
 
 	.cool-project-link:hover .image {
 		transform: scale(1);
+		box-shadow: 0px 0px 32px 8px #00a3ff;
 	}
 </style>
