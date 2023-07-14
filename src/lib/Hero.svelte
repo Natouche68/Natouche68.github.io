@@ -1,12 +1,71 @@
+<script lang="ts">
+	import { onMount } from "svelte";
+	import { observeElement, hackingAnimation } from "./animateOnScroll";
+	import Shard from "./Shard.svelte";
+
+	let titleElement: HTMLDivElement;
+	let subtitleElement: HTMLDivElement;
+	let continueElement: HTMLDivElement;
+
+	onMount(() => {
+		observeElement(titleElement, () => {
+			hackingAnimation(titleElement);
+		});
+		observeElement(subtitleElement, () => {
+			subtitleElement.animate(
+				[
+					{
+						transform: "translateX(-25%)",
+						opacity: "0",
+						filter: "blur(4px)",
+					},
+					{
+						transform: "translateX(0)",
+						opacity: "1",
+						filter: "blur(0)",
+					},
+				],
+				{
+					delay: 1100,
+					duration: 600,
+					easing: "cubic-bezier(0.5, 0, 0.5, 1)",
+					fill: "both",
+				}
+			);
+		});
+		observeElement(continueElement, () => {
+			continueElement.animate(
+				[
+					{
+						transform: "translateY(100%)",
+						opacity: "0",
+					},
+					{
+						transform: "translateY(0)",
+						opacity: "1",
+					},
+				],
+				{
+					delay: 1900,
+					duration: 400,
+					easing: "cubic-bezier(0.75, 0, 0.25, 1)",
+					fill: "both",
+				}
+			);
+		});
+	});
+</script>
+
 <div class="hero">
-	<div class="title">
+	<div class="title" bind:this={titleElement}>
 		Hi,<br />
 		I'm Natouche68
-
-		<div class="shard" />
 	</div>
-	<div class="subtitle">Self-taught web developer</div>
-	<div class="continue">// scroll to contiune</div>
+	<Shard height={334} />
+	<div class="subtitle" bind:this={subtitleElement}>
+		Self-taught web developer
+	</div>
+	<div class="continue" bind:this={continueElement}>// scroll to contiune</div>
 </div>
 
 <style>
@@ -27,18 +86,9 @@
 		/* bottom: 331px; */
 		font-size: 112px;
 		font-weight: 700;
-		line-height: 115.2px;
+		line-height: 115px;
 		letter-spacing: -3.36px;
 		text-transform: uppercase;
-	}
-
-	.shard {
-		position: absolute;
-		top: -45px;
-		left: -36px;
-		height: 334px;
-		width: 3px;
-		background: linear-gradient(#00a3ff00 0%, #00a3ff 50%, #00a3ff00 100%);
 	}
 
 	.subtitle {
