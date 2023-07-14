@@ -10,6 +10,7 @@
 	export let initialNameCoords: { x: number; y: number };
 	export let initialImages: Image[];
 	export let yOffset: number;
+	export let link: string;
 
 	let nameCoords = structuredClone(initialNameCoords);
 	let images = structuredClone(initialImages);
@@ -35,13 +36,14 @@
 <svelte:window bind:innerWidth={windowWidth} on:scroll={animateParallax} />
 
 <div class="project" style:top={`${yOffset}px`} bind:this={projectElement}>
-	<div
+	<a
 		class="name"
 		style:top={`calc(50% + ${nameCoords.y}px)`}
 		style:left={`calc(50% + ${nameCoords.x}px)`}
+		href={link}
 	>
 		{name}
-	</div>
+	</a>
 	{#each images as image}
 		<img
 			src={image.path}
@@ -61,6 +63,7 @@
 	}
 
 	.name {
+		display: block;
 		position: absolute;
 		padding: 24px;
 		width: min-content;
@@ -72,6 +75,14 @@
 		text-transform: uppercase;
 		transform: translate(-50%, -50%);
 		z-index: 1;
+		text-decoration: none;
+		transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+	}
+
+	.name:hover {
+		background: #131313;
+		color: #fff;
+		box-shadow: 0px 0px 16px 4px #00a3ff;
 	}
 
 	img {

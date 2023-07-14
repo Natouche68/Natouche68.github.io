@@ -50,6 +50,7 @@
 				},
 			]}
 			bind:yOffset={projectsYOffset}
+			link="https://archery-scorer.vercel.app/"
 		/>
 		<Project
 			name="Archery Watch"
@@ -69,6 +70,7 @@
 				},
 			]}
 			bind:yOffset={projectsYOffset}
+			link="https://archery-watch.vercel.app/"
 		/>
 		<Project
 			name="Tic Tac Toe AI"
@@ -82,6 +84,7 @@
 				},
 			]}
 			bind:yOffset={projectsYOffset}
+			link="https://github.com/Natouche68/tic-tac-toe-ai"
 		/>
 		<Project
 			name="Arcade Express"
@@ -95,6 +98,7 @@
 				},
 			]}
 			bind:yOffset={projectsYOffset}
+			link="https://arcade-express.vercel.app/"
 		/>
 		<Project
 			name="Whimsy Sky"
@@ -114,6 +118,7 @@
 				},
 			]}
 			bind:yOffset={projectsYOffset}
+			link="https://whimsy-sky.vercel.app/"
 		/>
 		<Project
 			name="Theme Generator"
@@ -127,6 +132,7 @@
 				},
 			]}
 			bind:yOffset={projectsYOffset}
+			link="https://theme-generator.onrender.com/"
 		/>
 		<Project
 			name="Some Games"
@@ -152,6 +158,7 @@
 				},
 			]}
 			bind:yOffset={projectsYOffset}
+			link="https://natouche68.itch.io/"
 		/>
 	</div>
 </div>
