@@ -51,21 +51,13 @@
 
 <style>
 	.about {
-		/* width: 100%; */
 		min-height: calc(100vh - 133px * 2);
-		/* background: #131313;
-		color: #ffffff; */
 		position: relative;
 		overflow: hidden;
 		padding: 133px 92px;
 	}
 
 	.title {
-		/* position: absolute;
-		top: 133px;
-		left: 92px;
-		right: 92px; */
-		/* bottom: 492px; */
 		font-size: 96px;
 		font-weight: 700;
 		line-height: 100%;
@@ -74,11 +66,6 @@
 	}
 
 	.text {
-		/* position: absolute;
-		top: 328px;
-		left: 92px;
-		right: 92px; */
-		/* bottom: 86px; */
 		margin-top: 92px;
 		font-family: "Inter", Arial, Helvetica, sans-serif;
 		font-size: 42px;

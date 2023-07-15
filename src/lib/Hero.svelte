@@ -70,21 +70,13 @@
 
 <style>
 	.hero {
-		/* width: 100%; */
 		min-height: calc(100vh - 148px * 2);
-		/* background: #131313;
-		color: #ffffff; */
 		position: relative;
 		overflow: hidden;
 		padding: 148px 92px;
 	}
 
 	.title {
-		/* position: absolute;
-		top: 148px;
-		left: 92px;
-		right: 92px; */
-		/* bottom: 331px; */
 		font-size: 112px;
 		font-weight: 700;
 		line-height: 115px;
@@ -93,11 +85,6 @@
 	}
 
 	.subtitle {
-		/* position: absolute;
-		top: 395px;
-		left: 92px;
-		right: 92px; */
-		/* bottom: 289px; */
 		text-align: right;
 		font-size: 32px;
 		font-weight: 700;
@@ -107,7 +94,6 @@
 
 	.continue {
 		position: absolute;
-		/* top: 657px; */
 		left: 0;
 		right: 0;
 		bottom: 29px;

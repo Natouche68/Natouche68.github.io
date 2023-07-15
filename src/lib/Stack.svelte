@@ -35,21 +35,13 @@
 
 <style>
 	.stack {
-		/* width: 100%; */
 		min-height: calc(100vh - 133px * 2);
-		/* background: #131313;
-		color: #ffffff; */
 		position: relative;
 		overflow: hidden;
 		padding: 133px 0;
 	}
 
 	.title {
-		/* position: absolute;
-		top: 133px;
-		left: 92px;
-		right: 92px; */
-		/* bottom: 492px; */
 		margin: 0 92px;
 		font-size: 96px;
 		font-weight: 700;
@@ -69,10 +61,6 @@
 	}
 
 	.list {
-		/* position: absolute;
-		top: 362px;
-		left: 0;
-		right: 0; */
 		margin-top: 128px;
 		height: 256px;
 

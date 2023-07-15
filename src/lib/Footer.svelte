@@ -20,13 +20,11 @@
 <style>
 	.footer {
 		min-height: 380px;
-		/* width: 100%; */
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
 		padding: 55px 0;
-		/* background: #131313; */
 		color: #a7a7a7;
 	}
 

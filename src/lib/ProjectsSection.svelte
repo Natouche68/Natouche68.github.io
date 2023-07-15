@@ -178,20 +178,12 @@
 
 <style>
 	.projects {
-		/* width: 100%; */
 		height: calc(700vh + 367px);
-		/* background: #131313;
-		color: #ffffff; */
 		position: relative;
 		overflow: hidden;
 	}
 
 	.title {
-		/* position: absolute;
-		top: 133px;
-		left: 92px;
-		right: 92px; */
-		/* bottom: 859px; */
 		margin: 133px 92px;
 		font-size: 96px;
 		font-weight: 700;
@@ -202,7 +194,6 @@
 
 	.list {
 		position: relative;
-		/* bottom: 0; */
 		height: 700vh;
 		width: 700vw;
 		display: flex;

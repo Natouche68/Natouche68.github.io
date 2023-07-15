@@ -56,21 +56,13 @@
 
 <style>
 	.inspiration {
-		/* width: 100%; */
 		min-height: calc(100vh - 133px * 2);
-		/* background: #131313;
-		color: #ffffff; */
 		position: relative;
 		overflow: hidden;
 		padding: 133px 92px;
 	}
 
 	.title {
-		/* position: absolute;
-		top: 133px;
-		left: 92px;
-		right: 92px; */
-		/* bottom: 492px; */
 		font-size: 96px;
 		font-weight: 700;
 		line-height: 100%;
@@ -79,11 +71,6 @@
 	}
 
 	.subtitle {
-		/* position: absolute;
-		top: 256px;
-		left: 92px;
-		right: 92px; */
-		/* bottom: 397px; */
 		margin-top: 22px;
 		color: #a7a7a7;
 		font-size: 32px;
@@ -94,13 +81,7 @@
 	}
 
 	.list {
-		/* position: absolute;
-		top: 403px;
-		left: 92px;
-		right: 92px; */
-		/* bottom: 107px; */
 		margin-top: 74px;
-
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
