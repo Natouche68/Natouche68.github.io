@@ -93,8 +93,8 @@
 
 		.title {
 			margin: 0 48px;
-			font-size: 72px;
-			line-height: 74px;
+			font-size: 56px;
+			line-height: 58px;
 		}
 
 		.list {
@@ -102,7 +102,7 @@
 		}
 
 		.list img {
-			transform: scale(0.9);
+			transform: scale(0.8);
 		}
 	}
 </style>

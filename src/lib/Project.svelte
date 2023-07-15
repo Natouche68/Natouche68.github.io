@@ -92,6 +92,7 @@
 	@media (max-width: 820px) {
 		.project {
 			transform: scale(0.7);
+			width: 150vw;
 		}
 	}
 </style>

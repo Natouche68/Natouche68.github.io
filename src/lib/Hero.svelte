@@ -127,17 +127,17 @@
 		}
 
 		.title {
-			font-size: 72px;
-			line-height: 74px;
+			font-size: 56px;
+			line-height: 58px;
 		}
 
 		.subtitle {
-			font-size: 24px;
+			font-size: 16px;
 			margin-top: 8px;
 		}
 
 		.continue {
-			font-size: 24px;
+			font-size: 16px;
 		}
 	}
 </style>

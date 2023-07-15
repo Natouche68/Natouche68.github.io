@@ -68,7 +68,7 @@
 
 	@media (max-width: 820px) {
 		.author {
-			font-size: 24px;
+			font-size: 16px;
 		}
 
 		.social {
@@ -85,7 +85,7 @@
 		}
 
 		.copyright {
-			font-size: 24px;
+			font-size: 16px;
 		}
 	}
 </style>

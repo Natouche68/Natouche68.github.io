@@ -97,13 +97,13 @@
 		}
 
 		.title {
-			font-size: 72px;
-			line-height: 74px;
+			font-size: 56px;
+			line-height: 58px;
 		}
 
 		.text {
-			font-size: 32px;
-			line-height: 110%;
+			font-size: 24px;
+			line-height: 130%;
 		}
 	}
 </style>

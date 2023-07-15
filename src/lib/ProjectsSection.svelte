@@ -9,12 +9,17 @@
 	let projectList: HTMLDivElement;
 	let projectListXOffset: number;
 	let windowHeight: number;
+	let windowWidth: number;
 	let projectsYOffset: number;
 
 	function animateParallax() {
 		const projectListYPosition = projectList.getBoundingClientRect().top;
 
-		projectListXOffset = (projectListYPosition / windowHeight) * 100;
+		if (windowWidth < 820) {
+			projectListXOffset = (projectListYPosition / windowHeight) * 150;
+		} else {
+			projectListXOffset = (projectListYPosition / windowHeight) * 100;
+		}
 
 		if (
 			projectListYPosition <= 0 &&
@@ -33,6 +38,7 @@
 
 <svelte:window
 	bind:innerHeight={windowHeight}
+	bind:innerWidth={windowWidth}
 	bind:scrollY={scroll}
 	on:scroll={animateParallax}
 />
@@ -207,9 +213,13 @@
 
 	@media (max-width: 820px) {
 		.title {
-			font-size: 72px;
-			line-height: 74px;
+			font-size: 56px;
+			line-height: 58px;
 			margin: 133px 48px;
+		}
+
+		.list {
+			width: 1050vw;
 		}
 	}
 </style>
