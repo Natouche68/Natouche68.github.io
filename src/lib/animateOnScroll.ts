@@ -19,7 +19,13 @@ export function observeElement(element: HTMLElement, appear: () => void): void {
 const letters = "ABCDEFGHIJKLKLMNOPQRSTUVWXYZ0123456789";
 
 export function hackingAnimation(element: HTMLElement): void {
-	const initialText = element.innerText;
+	let initialText: string;
+	if (element.dataset.title) {
+		initialText = element.dataset.title;
+	} else {
+		initialText = element.innerText;
+		element.dataset.title = element.innerText;
+	}
 	let iterations = 0;
 
 	const interval = setInterval(() => {
