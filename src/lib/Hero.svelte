@@ -70,19 +70,20 @@
 
 <style>
 	.hero {
-		width: 100%;
-		height: 100vh;
-		background: #131313;
-		color: #ffffff;
+		/* width: 100%; */
+		min-height: calc(100vh - 148px * 2);
+		/* background: #131313;
+		color: #ffffff; */
 		position: relative;
 		overflow: hidden;
+		padding: 148px 92px;
 	}
 
 	.title {
-		position: absolute;
+		/* position: absolute;
 		top: 148px;
 		left: 92px;
-		right: 92px;
+		right: 92px; */
 		/* bottom: 331px; */
 		font-size: 112px;
 		font-weight: 700;
@@ -92,15 +93,15 @@
 	}
 
 	.subtitle {
-		position: absolute;
+		/* position: absolute;
 		top: 395px;
 		left: 92px;
-		right: 92px;
+		right: 92px; */
 		/* bottom: 289px; */
 		text-align: right;
 		font-size: 32px;
 		font-weight: 700;
-		line-height: 32px;
+		line-height: 100%;
 		text-transform: capitalize;
 	}
 
@@ -117,5 +118,26 @@
 		line-height: 100%;
 		letter-spacing: -1.92px;
 		color: #a7a7a7;
+	}
+
+	@media (max-width: 820px) {
+		.hero {
+			min-height: calc(100vh - 196px * 2);
+			padding: 196px 48px;
+		}
+
+		.title {
+			font-size: 72px;
+			line-height: 74px;
+		}
+
+		.subtitle {
+			font-size: 24px;
+			margin-top: 8px;
+		}
+
+		.continue {
+			font-size: 24px;
+		}
 	}
 </style>

@@ -56,19 +56,20 @@
 
 <style>
 	.inspiration {
-		width: 100%;
-		height: 100vh;
-		background: #131313;
-		color: #ffffff;
+		/* width: 100%; */
+		min-height: calc(100vh - 133px * 2);
+		/* background: #131313;
+		color: #ffffff; */
 		position: relative;
 		overflow: hidden;
+		padding: 133px 92px;
 	}
 
 	.title {
-		position: absolute;
+		/* position: absolute;
 		top: 133px;
 		left: 92px;
-		right: 92px;
+		right: 92px; */
 		/* bottom: 492px; */
 		font-size: 96px;
 		font-weight: 700;
@@ -78,11 +79,12 @@
 	}
 
 	.subtitle {
-		position: absolute;
+		/* position: absolute;
 		top: 256px;
 		left: 92px;
-		right: 92px;
+		right: 92px; */
 		/* bottom: 397px; */
+		margin-top: 22px;
 		color: #a7a7a7;
 		font-size: 32px;
 		font-style: italic;
@@ -92,16 +94,32 @@
 	}
 
 	.list {
-		position: absolute;
+		/* position: absolute;
 		top: 403px;
 		left: 92px;
-		right: 92px;
+		right: 92px; */
 		/* bottom: 107px; */
-		height: 216px;
+		margin-top: 74px;
 
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		flex-wrap: wrap;
+		justify-content: space-around;
 		align-items: center;
+	}
+
+	@media (max-width: 820px) {
+		.inspiration {
+			padding: 133px 48px;
+		}
+
+		.title {
+			font-size: 72px;
+			line-height: 74px;
+		}
+
+		.subtitle {
+			font-size: 24px;
+		}
 	}
 </style>

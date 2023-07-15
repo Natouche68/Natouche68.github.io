@@ -172,20 +172,21 @@
 
 <style>
 	.projects {
-		width: 100%;
+		/* width: 100%; */
 		height: calc(700vh + 367px);
-		background: #131313;
-		color: #ffffff;
+		/* background: #131313;
+		color: #ffffff; */
 		position: relative;
 		overflow: hidden;
 	}
 
 	.title {
-		position: absolute;
+		/* position: absolute;
 		top: 133px;
 		left: 92px;
-		right: 92px;
+		right: 92px; */
 		/* bottom: 859px; */
+		margin: 133px 92px;
 		font-size: 96px;
 		font-weight: 700;
 		line-height: 100%;
@@ -194,12 +195,21 @@
 	}
 
 	.list {
-		position: absolute;
-		bottom: 0;
+		position: relative;
+		/* bottom: 0; */
 		height: 700vh;
+		width: 700vw;
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
 		justify-content: flex-start;
+	}
+
+	@media (max-width: 820px) {
+		.title {
+			font-size: 72px;
+			line-height: 74px;
+			margin: 133px 48px;
+		}
 	}
 </style>

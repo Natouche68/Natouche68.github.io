@@ -4,4 +4,6 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: "Space Mono", "Consolas", monospace;
+	background: #131313;
+	color: #fff;
 }

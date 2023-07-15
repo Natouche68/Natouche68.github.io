@@ -88,4 +88,10 @@
 	img {
 		position: absolute;
 	}
+
+	@media (max-width: 820px) {
+		.project {
+			transform: scale(0.7);
+		}
+	}
 </style>

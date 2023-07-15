@@ -7,6 +7,15 @@
 	export let height: number = 156;
 
 	let shardElement: HTMLDivElement;
+	let windowWidth: number;
+
+	$: {
+		if (windowWidth <= 820) {
+			x = 24;
+		} else {
+			x = 56;
+		}
+	}
 
 	onMount(() => {
 		observeElement(shardElement, () => {
@@ -31,6 +40,8 @@
 		});
 	});
 </script>
+
+<svelte:window bind:innerWidth={windowWidth} />
 
 <div
 	class="shard"

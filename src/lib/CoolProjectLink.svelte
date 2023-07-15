@@ -61,4 +61,10 @@
 		transform: scale(1);
 		box-shadow: 0px 0px 32px 8px #00a3ff;
 	}
+
+	@media (max-width: 820px) {
+		.cool-project-link {
+			transform: scale(0.8);
+		}
+	}
 </style>

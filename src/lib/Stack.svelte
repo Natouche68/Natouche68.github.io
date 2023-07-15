@@ -35,20 +35,22 @@
 
 <style>
 	.stack {
-		width: 100%;
-		height: 100vh;
-		background: #131313;
-		color: #ffffff;
+		/* width: 100%; */
+		min-height: calc(100vh - 133px * 2);
+		/* background: #131313;
+		color: #ffffff; */
 		position: relative;
 		overflow: hidden;
+		padding: 133px 0;
 	}
 
 	.title {
-		position: absolute;
+		/* position: absolute;
 		top: 133px;
 		left: 92px;
-		right: 92px;
+		right: 92px; */
 		/* bottom: 492px; */
+		margin: 0 92px;
 		font-size: 96px;
 		font-weight: 700;
 		line-height: 100%;
@@ -67,10 +69,11 @@
 	}
 
 	.list {
-		position: absolute;
+		/* position: absolute;
 		top: 362px;
 		left: 0;
-		right: 0;
+		right: 0; */
+		margin-top: 128px;
 		height: 256px;
 
 		display: flex;
@@ -80,5 +83,26 @@
 		gap: calc((100vw - 256px * 5) / 5);
 
 		animation: tools-list-anim 32s linear 0s infinite;
+	}
+
+	@media (max-width: 820px) {
+		.stack {
+			min-height: calc(100vh - 164px * 2);
+			margin: 164px 0;
+		}
+
+		.title {
+			margin: 0 48px;
+			font-size: 72px;
+			line-height: 74px;
+		}
+
+		.list {
+			margin-top: 256px;
+		}
+
+		.list img {
+			transform: scale(0.9);
+		}
 	}
 </style>
